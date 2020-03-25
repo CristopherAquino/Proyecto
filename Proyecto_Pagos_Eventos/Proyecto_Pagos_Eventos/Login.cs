@@ -21,6 +21,7 @@ namespace Proyecto_Pagos_Eventos
         int PosY = 0;
         int PosX = 0;
 
+//que rollo xd
 
         private void Form1_Load(object sender, EventArgs e)
         {
