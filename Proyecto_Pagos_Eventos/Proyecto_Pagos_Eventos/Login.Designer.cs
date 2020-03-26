@@ -28,179 +28,240 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Barra_de_Titulo = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.Barra_Abajo = new System.Windows.Forms.Panel();
-            this.label_NomUsuario = new System.Windows.Forms.Label();
-            this.textBox_Usuario = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtpass = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_Contraseña = new System.Windows.Forms.TextBox();
-            this.pictureBox_IconoUsuario = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Barra_de_Titulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.btnAcceder = new System.Windows.Forms.Button();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.Panel = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.lbMsgU = new System.Windows.Forms.Label();
+            this.lbMsgP = new System.Windows.Forms.Label();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_IconoUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
-            // Barra_de_Titulo
+            // panel1
             // 
-            this.Barra_de_Titulo.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Barra_de_Titulo.Controls.Add(this.btnMinimizar);
-            this.Barra_de_Titulo.Controls.Add(this.btnCerrar);
-            this.Barra_de_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Barra_de_Titulo.Location = new System.Drawing.Point(0, 0);
-            this.Barra_de_Titulo.Name = "Barra_de_Titulo";
-            this.Barra_de_Titulo.Size = new System.Drawing.Size(300, 41);
-            this.Barra_de_Titulo.TabIndex = 0;
-            this.Barra_de_Titulo.Paint += new System.Windows.Forms.PaintEventHandler(this.Barra_de_Titulo_Paint);
-            this.Barra_de_Titulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Barra_de_Titulo_MouseMove);
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbMsgP);
+            this.panel1.Controls.Add(this.lbMsgU);
+            this.panel1.Controls.Add(this.txtpass);
+            this.panel1.Controls.Add(this.txtUser);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.shapeContainer1);
+            this.panel1.Location = new System.Drawing.Point(42, 163);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(267, 202);
+            this.panel1.TabIndex = 1;
             // 
-            // btnMinimizar
+            // txtpass
             // 
-            this.btnMinimizar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnMinimizar.Image = global::Proyecto_Pagos_Eventos.Properties.Resources.icons8_minimizar_la_ventana_32;
-            this.btnMinimizar.Location = new System.Drawing.Point(250, 12);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(16, 16);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMinimizar.TabIndex = 2;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtpass.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpass.Location = new System.Drawing.Point(19, 110);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(226, 25);
+            this.txtpass.TabIndex = 3;
+            this.txtpass.Text = "Contraseña";
+            this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
+            this.txtpass.Leave += new System.EventHandler(this.txtpass_Leave);
             // 
-            // btnCerrar
+            // txtUser
             // 
-            this.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnCerrar.Image = global::Proyecto_Pagos_Eventos.Properties.Resources.icons8_cerrar_ventana_32;
-            this.btnCerrar.Location = new System.Drawing.Point(272, 12);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(16, 16);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // Barra_Abajo
-            // 
-            this.Barra_Abajo.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Barra_Abajo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Barra_Abajo.Location = new System.Drawing.Point(0, 480);
-            this.Barra_Abajo.Name = "Barra_Abajo";
-            this.Barra_Abajo.Size = new System.Drawing.Size(300, 20);
-            this.Barra_Abajo.TabIndex = 1;
-            this.Barra_Abajo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label_NomUsuario
-            // 
-            this.label_NomUsuario.AutoSize = true;
-            this.label_NomUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NomUsuario.ForeColor = System.Drawing.Color.Black;
-            this.label_NomUsuario.Location = new System.Drawing.Point(28, 176);
-            this.label_NomUsuario.Name = "label_NomUsuario";
-            this.label_NomUsuario.Size = new System.Drawing.Size(66, 21);
-            this.label_NomUsuario.TabIndex = 2;
-            this.label_NomUsuario.Text = "Usuario";
-            this.label_NomUsuario.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBox_Usuario
-            // 
-            this.textBox_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Usuario.Location = new System.Drawing.Point(31, 201);
-            this.textBox_Usuario.Multiline = true;
-            this.textBox_Usuario.Name = "textBox_Usuario";
-            this.textBox_Usuario.Size = new System.Drawing.Size(236, 36);
-            this.textBox_Usuario.TabIndex = 3;
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUser.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(19, 65);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(226, 25);
+            this.txtUser.TabIndex = 2;
+            this.txtUser.Text = "Usuario";
+            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
+            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(28, 239);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 16F);
+            this.label1.Location = new System.Drawing.Point(54, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Contraseña";
+            this.label1.Size = new System.Drawing.Size(152, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Iniciar Sesión";
             // 
-            // textBox_Contraseña
+            // shapeContainer1
             // 
-            this.textBox_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Contraseña.Location = new System.Drawing.Point(33, 264);
-            this.textBox_Contraseña.Multiline = true;
-            this.textBox_Contraseña.Name = "textBox_Contraseña";
-            this.textBox_Contraseña.PasswordChar = '*';
-            this.textBox_Contraseña.Size = new System.Drawing.Size(236, 34);
-            this.textBox_Contraseña.TabIndex = 5;
-            this.textBox_Contraseña.TextChanged += new System.EventHandler(this.textBox_Contraseña_TextChanged);
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape2,
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(265, 200);
+            this.shapeContainer1.TabIndex = 0;
+            this.shapeContainer1.TabStop = false;
             // 
-            // pictureBox_IconoUsuario
+            // lineShape2
             // 
-            this.pictureBox_IconoUsuario.Image = global::Proyecto_Pagos_Eventos.Properties.Resources.user_icon_icons_com_57997;
-            this.pictureBox_IconoUsuario.Location = new System.Drawing.Point(103, 62);
-            this.pictureBox_IconoUsuario.Name = "pictureBox_IconoUsuario";
-            this.pictureBox_IconoUsuario.Size = new System.Drawing.Size(90, 109);
-            this.pictureBox_IconoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_IconoUsuario.TabIndex = 6;
-            this.pictureBox_IconoUsuario.TabStop = false;
-            this.pictureBox_IconoUsuario.Click += new System.EventHandler(this.pictureBox1_Click_2);
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 19;
+            this.lineShape2.X2 = 244;
+            this.lineShape2.Y1 = 135;
+            this.lineShape2.Y2 = 135;
             // 
-            // button1
+            // lineShape1
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(32, 317);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 40);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Ingresar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 19;
+            this.lineShape1.X2 = 244;
+            this.lineShape1.Y1 = 90;
+            this.lineShape1.Y2 = 90;
+            // 
+            // btnAcceder
+            // 
+            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(122)))), ((int)(((byte)(226)))));
+            this.btnAcceder.FlatAppearance.BorderSize = 0;
+            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAcceder.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAcceder.ForeColor = System.Drawing.Color.White;
+            this.btnAcceder.Location = new System.Drawing.Point(111, 337);
+            this.btnAcceder.Name = "btnAcceder";
+            this.btnAcceder.Size = new System.Drawing.Size(125, 51);
+            this.btnAcceder.TabIndex = 2;
+            this.btnAcceder.Text = "Acceder";
+            this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.rectangleShape2,
+            this.Panel});
+            this.shapeContainer2.Size = new System.Drawing.Size(350, 500);
+            this.shapeContainer2.TabIndex = 4;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // rectangleShape2
+            // 
+            this.rectangleShape2.BackgroundImage = global::Proyecto_Pagos_Eventos.Properties.Resources.user__2_;
+            this.rectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rectangleShape2.BorderColor = System.Drawing.Color.Transparent;
+            this.rectangleShape2.Enabled = false;
+            this.rectangleShape2.Location = new System.Drawing.Point(131, 48);
+            this.rectangleShape2.Name = "rectangleShape2";
+            this.rectangleShape2.Size = new System.Drawing.Size(87, 80);
+            // 
+            // Panel
+            // 
+            this.Panel.AccessibleRole = System.Windows.Forms.AccessibleRole.Default;
+            this.Panel.BackColor = System.Drawing.Color.Transparent;
+            this.Panel.BackgroundImage = global::Proyecto_Pagos_Eventos.Properties.Resources.AzulLogin1;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(349, 271);
+            this.Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(90)))), ((int)(((byte)(182)))));
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(325, 3);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(20, 20);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCerrar.TabIndex = 5;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // lbMsgU
+            // 
+            this.lbMsgU.AutoSize = true;
+            this.lbMsgU.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMsgU.ForeColor = System.Drawing.Color.Red;
+            this.lbMsgU.Location = new System.Drawing.Point(19, 91);
+            this.lbMsgU.Name = "lbMsgU";
+            this.lbMsgU.Size = new System.Drawing.Size(29, 15);
+            this.lbMsgU.TabIndex = 4;
+            this.lbMsgU.Text = "Msg";
+            this.lbMsgU.Visible = false;
+            // 
+            // lbMsgP
+            // 
+            this.lbMsgP.AutoSize = true;
+            this.lbMsgP.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMsgP.ForeColor = System.Drawing.Color.Red;
+            this.lbMsgP.Location = new System.Drawing.Point(19, 136);
+            this.lbMsgP.Name = "lbMsgP";
+            this.lbMsgP.Size = new System.Drawing.Size(29, 15);
+            this.lbMsgP.TabIndex = 5;
+            this.lbMsgP.Text = "Msg";
+            this.lbMsgP.Visible = false;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(90)))), ((int)(((byte)(182)))));
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(299, 3);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(20, 20);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimizar.TabIndex = 6;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(300, 500);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox_IconoUsuario);
-            this.Controls.Add(this.textBox_Contraseña);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_Usuario);
-            this.Controls.Add(this.label_NomUsuario);
-            this.Controls.Add(this.Barra_Abajo);
-            this.Controls.Add(this.Barra_de_Titulo);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(350, 500);
+            this.Controls.Add(this.btnMinimizar);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnAcceder);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.shapeContainer2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
-            this.Opacity = 0.8D;
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Barra_de_Titulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_IconoUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel Barra_de_Titulo;
-        private System.Windows.Forms.Panel Barra_Abajo;
-        private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.PictureBox btnMinimizar;
-        private System.Windows.Forms.Label label_NomUsuario;
-        private System.Windows.Forms.TextBox textBox_Usuario;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtpass;
+        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_Contraseña;
-        private System.Windows.Forms.PictureBox pictureBox_IconoUsuario;
-        private System.Windows.Forms.Button button1;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.Button btnAcceder;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape Panel;
+        private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.Label lbMsgP;
+        private System.Windows.Forms.Label lbMsgU;
+        private System.Windows.Forms.PictureBox btnMinimizar;
     }
 }
 

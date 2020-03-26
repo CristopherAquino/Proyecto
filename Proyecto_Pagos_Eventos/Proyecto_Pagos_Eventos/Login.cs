@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Proyecto_Pagos_Eventos
 {
@@ -16,71 +17,67 @@ namespace Proyecto_Pagos_Eventos
         {
             InitializeComponent();
         }
+
         // Variables de posicion (Para evento de mover barra de titulo con el puntero del mosue)
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        int PosY = 0;
-        int PosX = 0;
-
-//que rollo xd
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void txtUser_Enter(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void Barra_de_Titulo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Barra_de_Titulo_MouseMove(object sender, MouseEventArgs e)
-        {
-
-            // Evento para movimiento de barra de titulo
-
-            if (e.Button != MouseButtons.Left)
-
+            if (txtUser.Text == "Usuario")
             {
-                PosX = e.X;
-                PosY = e.Y;
-            }
-
-            else
-           
-            {
-                Left = Left + (e.X - PosX);
-                Top = Top + (e.Y - PosY);
+                txtUser.Text = "";
+                txtUser.ForeColor = Color.Black;
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void txtUser_Leave(object sender, EventArgs e)
         {
+            if (txtUser.Text == "")
+            {
+                txtUser.Text = "Usuario";
+                txtUser.ForeColor = Color.Black;
+            }
 
         }
 
-        private void pictureBox1_Click_2(object sender, EventArgs e)
+        private void txtpass_Enter(object sender, EventArgs e)
         {
+            if (txtpass.Text == "Contraseña")
+            {
+                txtpass.Text = "";
+                txtpass.ForeColor = Color.Black;
+                txtpass.UseSystemPasswordChar = true;
+            }
+        }
 
+        private void txtpass_Leave(object sender, EventArgs e)
+        {
+            if (txtpass.Text == "")
+            {
+                txtpass.Text = "Contraseña";
+                txtpass.ForeColor = Color.Black;
+                txtpass.UseSystemPasswordChar = false;
+            }
+        }
+
+        //Movimiento del panel
+        private void Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,9 +100,37 @@ namespace Proyecto_Pagos_Eventos
             this.Hide();
         }
 
-        private void textBox_Contraseña_TextChanged(object sender, EventArgs e)
+        private void btnAcceder_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (txtUser.Text != "Usuario")
+                {
+                    lbMsgU.Visible = false;
+                    if (txtpass.Text != "Contraseña")
+                    {
+                        lbMsgP.Visible = false;
+                    }
+                    else msgErrorP("Ingrese Contraseña");
+                }
+                else msgErrorU("Ingrese Nombre de Usuario");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
 
+        private void msgErrorU(string msg)
+        {
+            lbMsgU.Text = msg;
+            lbMsgU.Visible = true;
+        }
+
+        private void msgErrorP(string msg)
+        {
+            lbMsgP.Text = msg;
+            lbMsgP.Visible = true;
         }
     }
 }
