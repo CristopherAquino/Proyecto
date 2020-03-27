@@ -110,6 +110,9 @@ namespace Proyecto_Pagos_Eventos
                     if (txtpass.Text != "Contraseña")
                     {
                         lbMsgP.Visible = false;
+                        this.Hide();
+                        Menu Menu = new Menu();
+                        Menu.Show();
                     }
                     else msgErrorP("Ingrese Contraseña");
                 }
