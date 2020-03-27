@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_Pagos_Eventos
 {
-    public partial class Form2 : Form
+    public partial class Menu : Form
     {
-        public Form2()
+        public Menu()
         {
             InitializeComponent();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

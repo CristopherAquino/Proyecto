@@ -95,7 +95,7 @@ namespace Proyecto_Pagos_Eventos
                 MessageBox.Show("Error - Usuario o Contraseña no validos");
             }
             */
-            Form Interfaz = new Form2();
+            Form Interfaz = new Menu();
             Interfaz.Show();
             this.Hide();
         }
